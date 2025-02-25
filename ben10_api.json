@@ -1,0 +1,105 @@
+{
+    "count": 10,
+    "aliens": [
+        {
+            "name": "Heatblast",
+            "image": "https://static.wikia.nocookie.net/ben10/images/3/3e/Heatblast_B10K.png",
+            "powers": [
+                "Fire Manipulation",
+                "Heat Resistance",
+                "Flight",
+                "Pyrokinesis"
+            ]
+        },
+        {
+            "name": "XLR8",
+            "image": "https://static.wikia.nocookie.net/ben10/images/7/7e/XLR8_B10K.png",
+            "powers": [
+                "Super Speed",
+                "Agility",
+                "Enhanced Reflexes",
+                "Wall Running"
+            ]
+        },
+        {
+            "name": "Four Arms",
+            "image": "https://static.wikia.nocookie.net/ben10/images/4/4d/Four_Arms_B10K.png",
+            "powers": [
+                "Super Strength",
+                "Enhanced Jumping",
+                "Durability",
+                "Combat Skills"
+            ]
+        },
+        {
+            "name": "Diamondhead",
+            "image": "https://static.wikia.nocookie.net/ben10/images/1/18/Diamondhead_B10K.png",
+            "powers": [
+                "Crystal Manipulation",
+                "Regeneration",
+                "Durability",
+                "Weapon Formation"
+            ]
+        },
+        {
+            "name": "Upgrade",
+            "image": "https://static.wikia.nocookie.net/ben10/images/9/94/Upgrade_B10K.png",
+            "powers": [
+                "Technological Merging",
+                "Laser Beams",
+                "Elasticity",
+                "Machine Control"
+            ]
+        },
+        {
+            "name": "Ghostfreak",
+            "image": "https://static.wikia.nocookie.net/ben10/images/3/34/Ghostfreak_B10K.png",
+            "powers": [
+                "Invisibility",
+                "Intangibility",
+                "Possession",
+                "Tentacle Growth"
+            ]
+        },
+        {
+            "name": "Ripjaws",
+            "image": "https://static.wikia.nocookie.net/ben10/images/5/5c/Ripjaws_B10K.png",
+            "powers": [
+                "Amphibious Abilities",
+                "Enhanced Swimming",
+                "Sharp Teeth",
+                "Bioluminescence"
+            ]
+        },
+        {
+            "name": "Wildmutt",
+            "image": "https://static.wikia.nocookie.net/ben10/images/6/6b/Wildmutt_B10K.png",
+            "powers": [
+                "Enhanced Senses",
+                "Agility",
+                "Climbing Ability",
+                "Strong Bite"
+            ]
+        },
+        {
+            "name": "Cannonbolt",
+            "image": "https://static.wikia.nocookie.net/ben10/images/d/d2/Cannonbolt_B10K.png",
+            "powers": [
+                "Rolling Attack",
+                "Durability",
+                "Momentum Control",
+                "Super Strength"
+            ]
+        },
+        {
+            "name": "Grey Matter",
+            "image": "https://static.wikia.nocookie.net/ben10/images/a/a2/Grey_Matter_B10K.png",
+            "powers": [
+                "Super Intelligence",
+                "Hacking",
+                "Small Size",
+                "Enhanced Agility"
+            ]
+        }
+    ]
+}

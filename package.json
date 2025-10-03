@@ -1,0 +1,18 @@
+{
+  "name": "jio-recharge-automation",
+  "version": "1.0.0",
+  "description": "Automated Jio recharge using Node.js and Playwright",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-server.js",
+    "recharge": "node trigger-recharge.js"
+  },
+  "keywords": ["jio", "recharge", "automation", "playwright"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "playwright": "^1.40.0"
+  }
+}

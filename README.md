@@ -33,6 +33,8 @@ npm install
 npx playwright install chromium
 ```
 
+**Note**: If you encounter issues with browser installation, you can use your system's Chrome/Chromium browser by setting the `BROWSER_PATH` in the configuration.
+
 ## Configuration
 
 Edit the `CONFIG` object at the top of `server.js` to set your details:
@@ -41,9 +43,17 @@ Edit the `CONFIG` object at the top of `server.js` to set your details:
 const CONFIG = {
   MOBILE_NUMBER: '9876543210',  // Replace with your mobile number
   UPI_ID: 'yourname@upi',        // Replace with your UPI ID
-  PORT: 3000
+  PORT: 3000,                    // Port for the Express server
+  BROWSER_PATH: '/usr/bin/chromium'  // Path to system browser (optional)
 };
 ```
+
+### Configuration Options
+
+- **MOBILE_NUMBER**: Your Jio mobile number (10 digits)
+- **UPI_ID**: Your UPI ID (e.g., yourname@paytm, yourname@gpay)
+- **PORT**: Port number for the Express server (default: 3000)
+- **BROWSER_PATH**: Path to system chromium/chrome browser. If not set or invalid, Playwright will use its bundled browser.
 
 ## Usage
 
@@ -52,16 +62,37 @@ const CONFIG = {
 npm start
 ```
 
-2. Send a POST request to initiate recharge:
+The server will start on http://localhost:3000 and display your configured mobile number and UPI ID.
+
+2. In a new terminal, send a POST request to initiate recharge:
+
+**Using the helper script:**
+```bash
+npm run recharge
+```
+
+**Using curl:**
 ```bash
 curl -X POST http://localhost:3000/recharge
 ```
 
-Or use any API client like Postman.
+**Using Postman or similar API client:**
+- Method: POST
+- URL: http://localhost:3000/recharge
+- No body required
 
 3. The browser will open and automate the recharge process.
 
 4. Approve the payment in your UPI app when prompted.
+
+### Testing the Server
+
+To test if the server is running correctly:
+```bash
+npm test
+```
+
+This will start the server and verify that the health check endpoint is working.
 
 ## API Endpoints
 

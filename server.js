@@ -1,11 +1,13 @@
 const express = require('express');
 const { chromium } = require('playwright');
+const fs = require('fs');
 
 // ==================== CONFIGURATION ====================
 const CONFIG = {
   MOBILE_NUMBER: '9876543210',  // Replace with your mobile number
   UPI_ID: 'yourname@upi',        // Replace with your UPI ID
-  PORT: 3000
+  PORT: 3000,
+  BROWSER_PATH: '/usr/bin/chromium'  // Path to system chromium browser
 };
 // =======================================================
 
@@ -20,10 +22,16 @@ app.post('/recharge', async (req, res) => {
     console.log('Starting Jio recharge automation...');
     
     // Launch browser
-    browser = await chromium.launch({ 
-      headless: false,  // Set to true for production
-      executablePath: '/usr/bin/chromium'  // Use system chromium
-    });
+    const launchOptions = { 
+      headless: false  // Set to true for production
+    };
+    
+    // Use system browser if available, otherwise use Playwright's bundled browser
+    if (CONFIG.BROWSER_PATH && fs.existsSync(CONFIG.BROWSER_PATH)) {
+      launchOptions.executablePath = CONFIG.BROWSER_PATH;
+    }
+    
+    browser = await chromium.launch(launchOptions);
     const context = await browser.newContext();
     const page = await context.newPage();
     
